@@ -1,0 +1,136 @@
+.rewrite-button {
+    z-index: 999;
+    padding: 2px;
+    min-width: 10px !important;
+    min-height: 10px !important;
+    max-width: 10px !important;
+    max-height: 10px !important;
+    background-color: rgba(9, 75, 162, 0.6);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    line-height: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-image: none;
+}
+
+.rewrite-button:hover {
+    transform: translateY(-60%);
+    border: none;
+    background-color: unset;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+}
+
+.rewrite-button img {
+    display: none;
+}
+
+.rewrite-button:hover img {
+    display: block;
+    border: none;
+}
+
+
+.suggestion-card ul {
+    margin: 0;
+    padding: 0;
+}
+
+.suggestion-card ul li {
+    list-style: none;
+    padding: 4px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.suggestion-card ul li:hover {
+    background-color: #f9f9f9;
+}
+
+
+.suggestions-card {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    position: absolute;
+    max-width: 400px;
+    max-height: 200px;
+    top: 50px;
+    left: 50px;
+    z-index: 9999;
+    overflow-y: scroll;
+}
+
+.suggestions-card-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* light shadow */
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+.suggest {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.suggest:hover {
+    background-color: #f5f5f5;
+}
+
+
+.spinner {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    border: 5px solid rgba(15, 28, 114, 0.1);
+    border-top: 4px solid #0099cc;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    border-width: 3em;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+}

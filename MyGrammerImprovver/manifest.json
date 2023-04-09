@@ -1,0 +1,49 @@
+{
+  "name": "Rewrite Button",
+  "version": "1.0",
+  "description": "Adds a Rewrite button next to every active input field.",
+  "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "action": {
+    "default_title": "RewriteApp",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icon.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "mime_type": "image/png"
+    }
+  ],
+  "icons": {
+    "16": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ]
+}
